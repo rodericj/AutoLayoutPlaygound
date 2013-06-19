@@ -16,6 +16,7 @@
 
 - (void) awakeFromNib {
     [self.label setText:@"Hey this is some really long text. I mean really long."];
+    self.label.preferredMaxLayoutWidth = 200;
 }
 
 @end
