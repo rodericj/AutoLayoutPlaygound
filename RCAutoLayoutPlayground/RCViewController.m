@@ -19,12 +19,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    RCOverlayView *overlayView = [[UINib nibWithNibName:@"OverlayView" bundle:nil] instantiateWithOwner:self options:nil][0];
+    overlayView.translatesAutoresizingMaskIntoConstraints = NO;
+    [[self view] addSubview:overlayView];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:overlayView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:overlayView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    RCOverlayView *view = [[RCOverlayView alloc] init];
-    [[self view] addSubview:view];
 }
 - (void)didReceiveMemoryWarning
 {

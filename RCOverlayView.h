@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface RCOverlayView : UIView
+@property (strong, nonatomic) IBOutlet UILabel *label;
 
 @end
