@@ -15,7 +15,7 @@
 @implementation RCOverlayView
 
 - (void) awakeFromNib {
-    [self.label setText:@"Hey this is some really long text"];
+    [self.label setText:@"Hey this is some really long text. I mean really long."];
 }
 
 @end
